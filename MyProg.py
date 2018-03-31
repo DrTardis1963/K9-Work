@@ -60,8 +60,6 @@ print ('speak now')
 record = "arecord voicedata.wav -d 15 -f S16_LE -r 44100 -t wav"
 transcript = "silence"
 mycallback = MyRecognizeCallback()
-# print ('speak now')
-# record = "arecord voicedata.wav -d 15 -f S16_LE -r 44100 -t wav"
 p = subprocess.Popen(record, shell=True)
 time.sleep(10)
 with open('voicedata.wav') as f:
