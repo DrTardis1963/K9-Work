@@ -1,0 +1,23 @@
+speak now
+Connection was successful
+[{'transcript': u'how '}]
+[{'transcript': u'how '}]
+[{'transcript': u'how '}]
+[{'transcript': u'hello '}]
+[{'transcript': u'hello '}]
+[{'transcript': u'hello '}]
+[{'transcript': u'hello '}]
+[{'transcript': u'hello '}]
+hello 
+Transcription completed
+Audio Transcribed
+
+|    | 
+V    V
+
+Traceback (most recent call last):
+  File "/home/pi/K9/k9-chess-angular-master/python/own.py", line 72, in <module>
+    answer = results.group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+So as you can see the trasncription works perfectly its just the last few lines that dont?
