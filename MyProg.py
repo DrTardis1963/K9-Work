@@ -67,11 +67,11 @@ time.sleep(10)
 with open('voicedata.wav') as f:
     speechtext = speech_to_text.recognize_with_websocket(audio=f,content_type='audio/l16; rate=44100', recognize_callback=mycallback)
 print ('Audio Transcribed')
-response = conversation.message(workspace_id=workspace_id, input={'text':transcript})
-results = re.search('\], u\'text\': \[u\'(.*)\'\]\}, u\'alt', str(response))
-answer = results.group(1)
-speak = './tts ' + answer
-subprocess.call(speak, shell=True)
+response = conversation.message(workspace_id=workspace_id, input={'text':transcript})  # this one
+results = re.search('\], u\'text\': \[u\'(.*)\'\]\}, u\'alt', str(response)) # this one
+answer = results.group(1) # this one
+speak = './tts ' + answer #this one 
+subprocess.call(speak, shell=True) # and this one
 while not finished:
     time.sleep(0.1)
 
